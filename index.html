@@ -69,7 +69,6 @@
                   <ul>
                      <li><strike>M</strike>V<strike>C</strike></li>
                      <li>Reusable</li>
-                     <li>Decrease coupling</li>
                      <li>Increase cohesion</li>
                      <li>Idempotent function</li>
                   </ul>
@@ -77,8 +76,7 @@
                      <ul>
                         <li>Alleen verantwoordelijk voor view</li>
                         <li>Prop validation, default props</li>
-                        <li>...</li>
-                        <li>Display logic en markup</li>
+                        <li>Decrease coupling. Cohesion between display logic en markup</li>
                         <li>Describe UI at any point in time (like server rendered app)</li>
                      </ul>
                   </aside>
@@ -112,14 +110,14 @@
                   <h2>What - Virtual DOM</h2>
                   <ul>
                      <li>Data change over time is the root of all evil</li>
-                     <li>Re-render app on data change</li>
                      <li>Diffing</li>
+                     <li>Re-render app on every data change</li>
                   </ul>
                   <aside class="notes">
                      <ul>
                         <li>Heel veel state, ui elementen onderling afhankelijk, event bus, onvoorspelbare veranderingen. Moeilijk voor programmeur om state over time te bevatten. </li>
-                        <li>ENTIRE app on data change!</li>
                         <li>Minimal DOM changes</li>
+                        <li>ENTIRE app on data change!</li>
                      </ul>
                   </aside>
                </section>
@@ -127,6 +125,11 @@
                <section>
                   <h2>What - Unidirectional data flow</h2>
                   <img src="https://cdn.tutsplus.com/net/uploads/2013/11/data-event-flow.png" />
+                  <aside class="notes">
+                     <ul>
+                        <li>Events passed up the chain by callbacks</li>
+                     </ul>
+                  </aside>
                </section>
 
                <section>
@@ -137,7 +140,8 @@
                   </ul>
                   <aside class="notes">
                      <ul>
-
+                        <li>Easy to reason about</li>
+                        <li>Pure render</li>
                      </ul>
                   </aside>
                </section>
@@ -148,22 +152,27 @@
                      <li>"Easy" to wrap your head around</li>
                      <li>"Easy" to unit test</li>
                      <li>Reusable components</li>
-                     <li>Populair <a href="http://www.google.com/trends/explore#q=angular.js%2C%20ember.js%2C%20react.js%2C%20backbone.js&date=1%2F2014%2021m&cmpt=q&tz=Etc%2FGMT-2">#1</a>, <a href="https://www.reddit.com/r/reactjs/about/traffic">#2</a>, <a href="http://danmartines.com/wp-content/uploads/2014/11/ch-js.png">#3</a></li>
+                     <li>Speed!</li>
+                     <li>Large and growing community</li>
                   </ul>
                   <aside class="notes">
                      <ul>
-                        <li>Idempotent. Use different data, check result. Shallow render. State en events nog steeds moeilijk.</li>
+                        <li>In tegenstelling tot componenten die elkaar events sturen dmv event bus</li>
+                        <li>Idempotent/pure. Use different data, check result. Shallow render. State en events nog steeds moeilijk.</li>
+                        <li>duh</li>
+                        <li>React is really fast</li>
+                        <li>Herbruikbare componenten, hulp. Heeft ook nadelen, nog erg in ontwikkeling.</li>
                      </ul>
                   </aside>
                </section>
 
                <section>
-                  <h2>ToDO</h2>
+                  <h2>Future</h2>
                   <ul>
-                     <li>Testen</li>
-                     <li>Stabiliteit</li>
-                     <li>Community</li>
-                     <li>Comm met backend</li>
+                     <li>Server side rendering</li>
+                     <li>Relay & GraphQL</li>
+                     <li>React Native</li>
+                     <li>Animations</li>
                   </ul>
                </section>
             </section>
